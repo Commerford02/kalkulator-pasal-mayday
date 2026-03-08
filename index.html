@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNDANG-UNDANG PIDANA KOTA MAYDAY</title>
+
+<style>
+:root{
+ --bg:#ffffff;
+ --text:#000000;
+ --tableBorder:#ccc;
+ --header:#3a3a3a;
+ --headerText:#ffffff;
+ --button:#333;
+}
+
+body.dark{
+ --bg:#121212;
+ --text:#eaeaea;
+ --tableBorder:#444;
+ --header:#222;
+ --headerText:#ffffff;
+ --button:#555;
+}
+
+body{
+ font-family:Arial,Helvetica,sans-serif;
+ margin:0;
+ padding:20px;
+ background:var(--bg);
+ color:var(--text);
+}
+
+.container{max-width:1200px;margin:auto}
+
+h1{text-align:center;margin-bottom:25px}
+
+.controls{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+
+input[type="text"]{
+ padding:8px;
+ border:1px solid var(--tableBorder);
+ border-radius:6px;
+ min-width:220px;
+ background:var(--bg);
+ color:var(--text);
+}
+
+button{
+ padding:8px 12px;
+ border:none;
+ border-radius:6px;
+ background:var(--button);
+ color:white;
+ cursor:pointer;
+}
+
+button:hover{opacity:.9}
+
+h2{margin-top:40px}
+
+table{
+ width:100%;
+ border-collapse:collapse;
+ margin-top:10px;
+}
+
+th,td{
+ border:1px solid var(--tableBorder);
+ padding:10px;
+ text-align:left;
+}
+
+th{
+ background:var(--header);
+ color:var(--headerText);
+}
+
+.section{
+ margin-top:40px;
+ padding:20px;
+ border:1px solid var(--tableBorder);
+ border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>UNDANG-UNDANG PIDANA KOTA MAYDAY</h1>
+
+<div class="controls">
+<input type="text" id="searchPasal" placeholder="Cari Pasal / Pelanggaran..." onkeyup="searchPasal()">
+<button onclick="toggleTheme()">Light / Dark</button>
+</div>
+
+<h2>UNDANG-UNDANG PIDANA RINGAN</h2>
+<table>
+<thead>
+<tr>
+<th>Pilih</th>
+<th>Pasal</th>
+<th>Pelanggaran</th>
+<th>Denda</th>
+<th>Masa Tahanan</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (A)</td><td>TIDAK MEMBAWA KTP / TIDAK MEMILIKI KTP</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (B)</td><td>MELAKUKAN PENIPUAN TERHADAP WARGA</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (C)</td><td>MELAKUKAN PEMALAKAN TERHADAP WARGA</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (D)</td><td>MEMBERIKAN INFORMASI PALSU KEPADA KEPOLISIAN</td><td>$5000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (E)</td><td>PENCEMARAN NAMA BAIK</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (F)</td><td>PENCEMARAN NAMA BAIK KEPADA INSTANSI</td><td>$5000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (G)</td><td>MENYALAHGUNAKAN PANGGILAN HOTLINE</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (H)</td><td>MENGHAMBAT PENYELIDIKAN</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (I)</td><td>MABUK DI TEMPAT UMUM</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (J)</td><td>PERKELAHIAN DI TEMPAT UMUM</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (K)</td><td>MENGGANGGU KETERTIBAN UMUM / PROVOKASI</td><td>$5000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (L)</td><td>TIDAK MELENGKAPI ATRIBUT BERKENDARA</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (M)</td><td>MEMAKAI HAL YANG TIDAK SENONOH DI KERAMAIAN</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (N)</td><td>MELAKUKAN TINDAKAN YANG TIDAK SENONOH DI KERAMAIAN</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (O)</td><td>MELAKUKAN AKSI DEMO TANPA IZIN</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (P)</td><td>MELAKUKAN TINDAKAN ANARKIS PADA SAAT AKSI DEMO</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (Q)</td><td>MENGHALANGI TUGAS INSTANSI (PENGEJARAN)</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (R)</td><td>MENGKONSUMSI NARKOBA DAN NARKOTIKA</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>1 (S)</td><td>MENCURI KENDARAAN WARGA</td><td>$5000</td><td>5 BULAN</td></tr>
+</tbody>
+</table>
+
+<h2>UNDANG-UNDANG PIDANA SEDANG</h2>
+<table>
+<thead>
+<tr>
+<th>Pilih</th>
+<th>Pasal</th>
+<th>Pelanggaran</th>
+<th>Denda</th>
+<th>Masa Tahanan</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (A)</td><td>PENGANIAYAAN PEMUKULAN TERHADAP WARGA</td><td>$8000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (B)</td><td>MELAKUKAN PEMBEGALAN TERHADAP WARGA</td><td>$8000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (C)</td><td>UPAYA PENYOGOKAN KEPADA PETUGAS</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (D)</td><td>BERADA DI ZONA MERAH / ILEGAL</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (E)</td><td>MENYALAHGUNAKAN ATRIBUT KEPOLISIAN</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (F)</td><td>MELAKUKAN PEMBURUAN ILEGAL (TIDAK MEMILIKI LISENSI)</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (G)</td><td>MEMBAWA MINUMAN BERALKOHOL (BEER DAN WHISKEY)</td><td>$8000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (H)</td><td>MEMBAWA NARKOBA DAN NARKOTIKA (MARIJUANA DAN KANABIS)</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (I)</td><td>MEMBAWA BARANG ILEGAL (KEVLAR, LINGGIS DAN KUNCI LETTER T)</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (J)</td><td>MEMBAWA HEWAN YANG DI LINDUNGI (HIU DAN PENYU)</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (K)</td><td>KEPEMILIKAN BARANG ILEGAL (URANIUM ACD DAN URANIUM)</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (L)</td><td>MEMBAWA UANG MERAH > $0 - $1.000</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (M)</td><td>MEMBAWA UANG MERAH > $1000 - $50.000</td><td>$12000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (N)</td><td>MEMBAWA UANG MERAH > $50.000 - $1.000.000</td><td>$15000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (O)</td><td>PENCUCIAN UANG MERAH</td><td>$15000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (P)</td><td>PENCURIAN KENDARAAN ILEGAL / CAR STEALING</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (Q)</td><td>SMUGGLER / PENYELUNDUPAN BARANG ILEGAL</td><td>$30000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (R)</td><td>MELAKUKAN PROSES NARKOBA DAN NARKOTIKA</td><td>$12000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (S)</td><td>MELAKUKAN TINDAKAN KABUR DARI FEDERAL</td><td>$10000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (T)</td><td>PENGEDARAN BARANG ILEGAL (KEVLAR, MARIJUANA, KANABIS, URANIUM ACD DAN URANIUM)</td><td>$20000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (U)</td><td>SENGAJA ATAU TIDAK SENGAJA BERADA DI TKP PEPERANGAN</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>2 (V)</td><td>UPAYA MELAWAN / MELARIKAN PETUGAS KEPOLISIAN</td><td>$8000</td><td>15 BULAN</td></tr>
+</tbody>
+</table>
+
+<h2>UNDANG-UNDANG PIDANA BERAT</h2>
+<table>
+<thead>
+<tr>
+<th>Pilih</th>
+<th>Pasal</th>
+<th>Pelanggaran</th>
+<th>Denda</th>
+<th>Masa Tahanan</th>
+</tr>
+</thead>
+<tbody>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (A)</td><td>PENGEDARAN SENJATA API ILEGAL</td><td>$15000</td><td>20 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (B)</td><td>KEPEMILIKAN SENJATA TAJAM DAN TUMPUL</td><td>$5000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (C)</td><td>KEPEMILIKAN SENJATA API ILEGAL (LARAS PENDEK)</td><td>$20000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (D)</td><td>KEPEMILIKAN SENJATA API ILEGAL (LARAS MENENGAH)</td><td>$25000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (E)</td><td>KEPEMILIKAN SENJATA API ILEGAL (LARAS PANJANG)</td><td>$30000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (F)</td><td>MEMPRODUKSI SENJATA API ILEGAL</td><td>$10000</td><td>20 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (G)</td><td>TIDAK MEMILIKI LISENSI SENJATA API RESMI KEPOLISIAN</td><td>$15000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (H)</td><td>MELAKUKAN PENYANDRAAN KEPADA WARGA</td><td>$15000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (I)</td><td>MELAKUKAN PENYANDRAAN KEPADA PETUGAS KEPOLISIAN</td><td>$20000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (J)</td><td>MELAKUKAN PENYANDRAAN KEPADA ANGGOTA INSTANSI</td><td>$20000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (K)</td><td>UPAYA PEMBUNUHAN KEPADA WARGA MAUPUN PETUGAS</td><td>$25000</td><td>15 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (L)</td><td>PENODONGAN TERHADAP WARGA</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (M)</td><td>PENODONGAN TERHADAP PETUGAS KEPOLISIAN</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (N)</td><td>MELAKUKAN PENEMBAKAN TERHADAP WARGA</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (O)</td><td>MELAKUKAN PENEMBAKAN TERHADAP PETUGAS KEPOLISIAN</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (P)</td><td>PERAMPOKAN WARUNG BERSENJATA</td><td>$15000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (Q)</td><td>PEPERANGAN ANTAR KELOMPOK</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (R)</td><td>MENCOBA MENJADI POLISI GADUNGAN</td><td>$20000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (S)</td><td>UPAYA PENGHILANGAN BARANG BUKTI</td><td>$10000</td><td>5 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (T)</td><td>UPAYA PENCULIKAN WARGA MAUPUN PETUGAS / INSTANSI</td><td>$25000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (U)</td><td>MENCOBA UNTUK MEMBANTU KRIMINALISME</td><td>$10000</td><td>10 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (V)</td><td>MELAKUKAN PERAMPOKAN BANK BESAR</td><td>$30000</td><td>30 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (W)</td><td>PERAMPOKAN RUMAH</td><td>$35000</td><td>20 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (X)</td><td>PERAMPOKAN JEWELRY</td><td>$40000</td><td>25 BULAN</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (Y)</td><td>MELAKUKAN TINDAKAN KORUPSI INSTANSI</td><td>$50000</td><td>PERSIDANGAN / HUKUMAN MATI</td></tr>
+<tr><td><input type="checkbox" onchange="updateRekap()"></td><td>4 (Z)</td><td>TERORISME</td><td>$50000</td><td>HUKUMAN MATI</td></tr>
+</tbody>
+</table>
+
+<div class="section">
+<h2>Rekapan Pasal</h2>
+<p id="pasalDipilih"><b>Pasal yang Dipilih:</b> -</p>
+<p id="totalDenda"><b>Total Denda:</b> $0</p>
+<p id="totalTahanan"><b>Total Tahanan:</b> 0 bulan</p>
+
+<div style="margin-top:15px;display:flex;gap:10px;flex-wrap:wrap;">
+<button onclick="resetPasal()">Reset Pasal</button>
+<button onclick="copyPasal()">Copy Pasal</button>
+<button onclick="copyDenda()">Copy Denda</button>
+</div>
+</div>
+
+</div>
+
+<script>
+function getSelectedRows(){
+ const rows=document.querySelectorAll('tbody tr');
+ let data=[];
+ rows.forEach(row=>{
+  const cb=row.querySelector('input[type="checkbox"]');
+  if(cb&&cb.checked){
+   const pasal=row.cells[1].innerText.trim();
+   const denda=parseInt(row.cells[3].innerText.replace(/[^0-9]/g,''))||0;
+   const tahan=parseInt(row.cells[4].innerText.replace(/[^0-9]/g,''))||0;
+   data.push({pasal,denda,tahan});
+  }
+ });
+ return data;
+}
+
+function updateRekap(){
+ const selected=getSelectedRows();
+ const pasalList=selected.map(p=>p.pasal).join(', ')||'-';
+ const totalDenda=selected.reduce((a,b)=>a+b.denda,0);
+ const totalTahan=selected.reduce((a,b)=>a+b.tahan,0);
+ document.getElementById('pasalDipilih').innerHTML='<b>Pasal yang Dipilih:</b> '+pasalList;
+ document.getElementById('totalDenda').innerHTML='<b>Total Denda:</b> $'+totalDenda;
+ document.getElementById('totalTahanan').innerHTML='<b>Total Tahanan:</b> '+totalTahan+' bulan';
+}
+
+function resetPasal(){
+ document.querySelectorAll('input[type="checkbox"]').forEach(cb=>cb.checked=false);
+ updateRekap();
+}
+
+function copyText(text){
+ const ta=document.createElement('textarea');
+ ta.value=text;
+ document.body.appendChild(ta);
+ ta.select();
+ document.execCommand('copy');
+ document.body.removeChild(ta);
+}
+
+function copyPasal(){
+ const selected=getSelectedRows();
+ const pasalList=selected.map(p=>p.pasal).join(', ')||'-';
+ copyText(pasalList);
+ alert('Pasal berhasil di copy');
+}
+
+function copyDenda(){
+ const selected=getSelectedRows();
+ const totalDenda=selected.reduce((a,b)=>a+b.denda,0);
+ copyText('$'+totalDenda);
+ alert('Total denda berhasil di copy');
+}
+
+function searchPasal(){
+ const input=document.getElementById('searchPasal').value.toLowerCase();
+ const rows=document.querySelectorAll('tbody tr');
+ rows.forEach(r=>{
+  const text=r.innerText.toLowerCase();
+  r.style.display=text.includes(input)?'':'none';
+ });
+}
+
+function toggleTheme(){
+ document.body.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
